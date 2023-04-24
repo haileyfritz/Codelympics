@@ -1,0 +1,157 @@
+{% extends "layout.html" %}
+{% block title %}Sign Up{% endblock %}
+
+
+{% block styles %}
+.signup-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    margin-top:75px;
+    padding: 20px;
+    width: 400px;
+  }
+
+  .label-container {
+    display: flex;
+    flex-direction: column; 
+    width: 60%; 
+  }
+  
+  label {
+    margin-bottom: 10px;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between; 
+    align-items: center; 
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid lightgray;
+    border-radius: 20px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: small;
+    font-family: "Metamorphous", cursive;
+  }
+
+  input:hover, input:active{
+    font-size: 15px;
+    transition: 0.4s ease-in-out;
+  }
+  
+  button {
+    background-color: #6dbfb8;
+    color: black;
+    padding: 10px 20px;
+    border: 2px solid #243246;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-family: "Metamorphous", cursive;
+  }
+
+  button:hover{
+    font-size: 16px;
+    background-color: #5eaaa4; 
+    transition: 0.5s ease-in-out;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 10px;
+    
+  }
+    
+  .form-row label {
+    margin-right: 10px;
+    grid-row: 1;
+  }
+    
+  .form-row input {
+    flex: 1; 
+    grid-row: 2;
+  }
+
+  label img {
+    display: inline-block;
+    width: 100%;
+    height: auto;
+  }
+  
+
+  a{
+    font-size: small;
+    color: red;
+  }
+
+  a:hover{
+      color: blue;
+      font-size: medium;
+      transition: 0.5s;
+  }
+
+  p, span, a{
+    font-family: 'Metamorphous', cursive;
+    font-size:small;
+    display: contents;
+  }
+
+  
+  {% endblock %}
+
+{% block content %}
+<div class="signup-container">
+
+    <form method="POST" action="/signup/competitor">
+
+        <div class="form-group">
+        <div class="form-row label-container">
+            <label for="fname"><img src="https://imgur.com/4Z3jg0D.png" alt="First Name"></label>
+            <input type="text" placeholder="First Name" name="first_name" id="fname" required>
+        </div>
+        <div class="form-row label-container">
+            <label for="lname"><img src="https://imgur.com/lOavs10.png" alt="Last Name"></label>
+            <input type="text" placeholder="Last Name" name="last_name" id="lname" required>
+        </div>
+        <div class="form-row label-container">
+            <label for="username"><img src="https://imgur.com/48Tx8Ea.png" alt="Username"></label>
+            <input type="text" placeholder="Username" name="username" id="username" required>
+        </div>
+        </div>
+        <div class="form-group">
+        <div class="form-row label-container">
+            <label for="email"><img src="https://imgur.com/dMAxlSG.png" alt="Email Address"></label>
+            <input type="email" placeholder="Email Address" name="email" id="email" required>
+        </div>
+        <div class="form-row label-container">
+            <label for="password"><img src="https://imgur.com/DKqBnpj.png" alt="Password"></label>
+            <input type="password" placeholder="Password" name="password" id="password" required>
+        </div>
+        </div>
+        <button type="submit">Sign Up!</button>
+
+        <span>Have an account? Go</span> <a href="/">back to Login!</a>
+    </form>
+
+</div>
+
+{% endblock %}

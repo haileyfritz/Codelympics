@@ -1,0 +1,184 @@
+{% extends "layout.html" %}
+{% block title %}Dashboard{% endblock %}
+
+{% block styles %}
+.main_content{
+  position: relative;
+  height: fit-content;
+  flex-direction:column;
+  padding: 20px;
+}
+
+main{
+  margin-top: 0px;
+}
+
+nav {
+    background-color: #333;
+    color: #fff;
+    padding: 3px;
+    text-align: center;
+    position: relative;
+    margin-top: 85px;
+    top: 100%;
+    height: 30px;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+  }
+
+nav ul {
+  list-style-type: none;
+  margin-top: 10px;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav li {
+  margin: 0 10px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: medium;
+}
+
+.nav-links {
+  display: flex;
+  align-items:last baseline;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a:hover{
+  font-size: 18px;
+  transition: 0.5s;
+}
+
+.nav-links-left {
+  margin-right: auto;
+}
+
+.nav-links-right {
+  margin-left: auto;
+}
+
+.nav-links li {
+  margin: 0 10px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+
+  #header {
+    text-align: center;
+    margin-top:60px;
+    padding: 20px;
+  }
+  
+  #header h1 {
+    margin: 0;
+  }
+
+  .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .label{
+    text-align: center;
+    margin-top:30px;
+    padding: 20px;
+
+  }
+
+  .btn-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 30px;
+  }
+  
+  
+  .btn {
+    background-color: #6dbfb8;
+    border: solid 2px #282828;
+    color: black;
+    padding: 10px 20px;
+    height:95px;
+    width:180px;
+    text-align: center;
+    text-decoration: none;
+    font-size: medium;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 15px;
+    margin-top: 5px;
+    font-family: "Metamorphous", cursive;
+    line-height: 1.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .btn:hover{
+    font-size:large;
+    background-color: #5eaaa4;
+    transition: 0.5s;
+  }
+
+  .btn:active{
+      background-color: #92c3c0;
+      transition:0.2s;
+  }
+
+  .btn-group{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+{% endblock %}
+
+{% block nav %}
+<header>
+    <nav>
+      <ul class="nav-links nav-links-left">
+        <li><a href="/home">Organizations</a></li>
+      </ul>
+      <ul class="nav-links">
+        <li><a href="/coordinator">Dashboard</li>
+      </ul>
+      <ul class="nav-links nav-links-right">
+        <li><a href="/account">Account</a></li>
+        <li><a href="/logout">Log Out</a></li>
+      </ul>
+    </nav>
+  </header>
+{% endblock %}
+
+{% block content %}
+<div id="menu">
+  <div id="header">
+    <h1>Dashboard</h1>
+  </div>
+  <div id="button-container">
+    <div class="btn-container">
+      <a href="/coordinator/add-competition" class="btn">Add New Competition Results</a>    
+      <a href="/{{organization}}/competitions" class="btn">Manage Existing Competition</a>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,276 @@
+{% extends "layout.html" %}
+{% block title %}Competition Results{% endblock %}
+
+{% block styles %}
+.main_content{
+  position: relative;
+  height: fit-content;
+  flex-direction:column;
+  padding: 20px;
+}
+
+main{
+  margin-top: 0px;
+}
+
+div{
+  display:grid;
+}
+
+nav {
+  background-color: #333;
+  color: #fff;
+  padding: 3px;
+  text-align: center;
+  position: relative;
+  margin-top: 85px;
+  top: 100%;
+  height: 30px;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav ul {
+  list-style-type: none;
+  margin-top: 10px;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav li {
+  margin: 0 10px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: medium;
+}
+
+.nav-links {
+  display: flex;
+  align-items:last baseline;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a:hover{
+  font-size: 18px;
+  transition: 0.5s;
+}
+
+.nav-links-left {
+  margin-right: auto;
+}
+
+.nav-links-right {
+  margin-left: auto;
+}
+
+.nav-links li {
+  margin: 0 10px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+  #header {
+    text-align: center;
+    padding: 20px;
+  }
+
+  #header h1 {
+    margin: 0;
+  }
+
+  .search_team{
+    border-radius:20px;
+    border: 2px solid #282828;
+    padding: 10px;
+    width: 95%;
+    text-align: center;
+    font-family: "Metamorphous", cursive;
+    font-size: 13px;
+  }
+
+  .search_team:hover{
+    width: 100%;
+    transition:0.4s;
+  }
+
+  .competition_info{
+    border: 2px solid #282828;
+    box-sizing: border-box;
+    background-color: transparent;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: rgba(233, 255, 247, .40);
+    font-size: 13px;
+  }
+
+  .leaderboard{
+    border: 2px solid #282828;
+    box-sizing: border-box;
+    background-color: transparent;
+    border-radius: 20px;
+    padding: 20px;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(233, 255, 247, .55);
+  }
+
+  .leaderboard_header{
+    text-align: center;
+  }
+
+  table {
+    border-collapse: collapse;
+  }
+
+  th{
+    font-size: 18px;
+  }
+
+  a{
+    color: black;
+    text-decoration: none;
+  }
+
+  a:hover{
+    text-decoration:underline;
+    transition: 0.2s;
+  }
+
+  th:hover{
+    font-size: 19px;
+    transition: 0.4s;
+  }
+
+  tr:hover{
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+
+  td, th {
+    padding: 10px;
+  }
+
+  tr{
+    border-bottom: 2px solid #282828;
+  }
+
+
+  #searchedRow{
+    font-size: 16px;
+  }
+  
+{% endblock %}
+
+{% block nav %}
+<header>
+    <nav>
+      <ul class="nav-links nav-links-left">
+        <li><a href="/home">Organizations</a></li>
+      </ul>
+      {% if user_type == 'Coordinator' %}
+      <ul class="nav-links">
+        <li><a href="/coordinator">Dashboard</li>
+      </ul>
+      {%endif%}
+      <ul class="nav-links nav-links-right">
+        <li><a href="/account">Account</a></li>
+        <li><a href="/logout">Log Out</a></li>
+      </ul>
+    </nav>
+</header>
+{% endblock %}
+
+{% block content %}
+<div style="text-align: center;">
+  <h1>{{competition.name}}</h1>
+</div>
+
+<div class="competition_info">
+  <div style="margin-left:20px;">
+    <p>Organization Name: {{organization_name}}</p>
+    <p>Start Time: {{ start_time }}</p>
+    <p>End Time: {{ end_time }}</p>
+  </div>
+</div>
+
+<div class="leaderboard_header">
+  <h1>LEADERBOARD</h1>
+</div>
+
+<div class="leaderboard">
+  <table id="teamsTable">
+    <thead>
+      <tr>
+        <th>Team</th>
+        <th>Points</th>
+        <th>Time Taken</th>
+        <th>Rank</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr id="searchedFor">
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><input class="search_team" id="searchInput" type="text" placeholder="Search" oninput="searchTeams()">
+        </td>
+      </tr>
+      {% for t in competition_list%}
+        <tr>
+          <td><a href="/{{t.team_name}}-results" id="{{t.team_name}}">{{ t.team_name}}</a></td>
+          <td>{{ t.points }}</td>
+          <td>{{ t.time_taken }}</td>
+          <td>{{ t.rank }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}
+
+{% block scripts %}
+function searchTeams() {
+    const input = document.getElementById("searchInput");
+    const filter = input.value.toUpperCase();
+    const table = document.getElementById("teamsTable");
+    const rows = table.getElementsByTagName("tr");
+    const searchedRow = document.getElementById("searchedFor");
+  
+    if (filter === "") {
+      searchedRow.innerHTML = "<td></td><td></td><td></td>";
+      searchedRow.classList.remove("active");
+      return;
+    }
+  
+    for (let i = 1; i < rows.length; i++) {
+      const name = rows[i].getElementsByTagName("td")[0].textContent.toUpperCase();
+      if (name.includes(filter)) {
+        searchedRow.innerHTML = rows[i].outerHTML;
+        searchedRow.classList.add("active");
+        table.insertBefore(searchedRow, rows[i]);
+        break;
+      }
+    }
+  }
+{% endblock %}                                   

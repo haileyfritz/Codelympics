@@ -1,0 +1,237 @@
+{% extends "layout.html" %}
+{% block title %}Add Competition{% endblock %}
+
+{% block styles %}
+main{
+  margin-top:0px;
+}
+
+.main_content{
+  position: relative;
+  height: fit-content;
+  flex-direction:column;
+  padding: 20px;
+  align-items: center;
+  background: linear-gradient(rgba(201, 246, 230, 0.35),rgba(71, 134, 163, 0.65)), url('https://i.imgur.com/Ix2Q5ua.jpg');
+}
+
+nav {
+  background-color: #333;
+  color: #fff;
+  padding: 3px;
+  text-align: center;
+  position: relative;
+  margin-top: 70px;
+  top: 100%;
+  height: 50px;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav ul {
+  list-style-type: none;
+  margin-top: 10px;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav li {
+  margin: 0 10px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: medium;
+}
+
+.nav-links {
+  display: flex;
+  align-items:last baseline;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a:hover{
+  font-size: 18px;
+  transition: 0.5s;
+}
+
+.nav-links-left {
+  margin-right: auto;
+}
+
+.nav-links-right {
+  margin-left: auto;
+}
+
+.nav-links li {
+  margin: 0 10px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.item-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  padding: 0px;
+  width: 400px;
+}
+
+.label-container {
+  display: flex;
+  flex-direction: column; 
+  width: 100%; 
+}
+
+label {
+  margin-bottom: 1px;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+label:hover{
+  font-size: 28px;
+  transition: 0.5s;
+}
+
+h1{
+  font-size: 35px;
+}
+
+h1:hover{
+  font-size: 36px;
+  transition: 0.5s;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: row; 
+  justify-content: space-between; 
+  align-items: center; 
+  margin-bottom: 20px;
+  width: auto;
+}
+
+input[type="text"],
+input[type="time"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid lightgray;
+  border-radius: 20px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: medium;
+  font-family: "Metamorphous", cursive;
+}
+
+input:hover, input:active{
+  font-size: large;
+  transition: 0.5s;
+}
+
+button {
+  background-color: #6dbfb8;
+  color: black;
+  padding: 10px 20px;
+  border: 2px solid #243246;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-family: "Metamorphous", cursive;
+}
+
+button:hover{
+  font-size: 16px;
+  background-color: #5eaaa4; 
+  transition: 0.5s ease-in-out;
+}
+
+#back{
+  background-color: lightgray;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-gap: 10px;
+}
+
+.form-row label {
+  margin-right: 10px;
+  grid-row: 1;
+}
+
+.form-row input {
+  flex: 1; 
+  grid-row: 2;
+}
+
+a{
+  text-decoration:none;
+  color: black;
+}
+{% endblock %}
+
+{% block nav %}
+<header>
+    <nav>
+      <ul class="nav-links nav-links-left">
+        <li><a href="/home">My Competitions</a></li>
+      </ul>
+      <ul class="nav-links">
+        <li><a href="/coordinator">Dashboard</li>
+      </ul>
+      <ul class="nav-links nav-links-right">
+        <li><a href="/account">Account</a></li>
+        <li><a href="/logout">Log Out</a></li>
+      </ul>
+    </nav>
+  </header>
+{% endblock %}
+
+
+{% block content %}
+<div class="item-container">
+<h1>Add Competition</h1>
+<br>
+<form method = 'POST' action = '/coordinator/   add-competition'>
+    <div class="form-group">
+      <div class="form-row label-container">
+          <label>Competition Name</label>
+          <input type="text" placeholder="Competition Name" name="name" id="input1" required>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="form-row label-container">
+        <label>Start Time</label>
+        <input type="text" placeholder="Start Time" name="start_time" id="input2" required>
+      </div>
+
+      <div class="form-row label-container">
+          <label>End Time</label>
+          <input type="text" placeholder="End Time" name="end_time" id="input4" required>
+      </div>
+    </div>
+    <button type="submit">Submit</button>
+    <button id='back'><a href="/coordinator">Cancel</a></button>
+  </form>
+</div>
+{% endblock %}

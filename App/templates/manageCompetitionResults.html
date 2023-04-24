@@ -1,0 +1,141 @@
+{% extends "layout.html" %}
+{% block title %}Manage Results{% endblock %}
+
+{% block styles %}
+nav {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    z-index: 3;
+    display: flex;
+    justify-content: space-between;
+}
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  nav li {
+    margin: 0 10px;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .nav-links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links-left {
+    margin-right: auto;
+  }
+  
+  .nav-links-right {
+    margin-left: auto;
+  }
+  
+  .nav-links li {
+    margin: 0 10px;
+  }
+  
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  header {
+    margin-top:85px;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+
+.button-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  text-align: center;
+  margin-bottom:2em;
+}
+
+.button1, .button2, .button3, .button4 {
+  padding: 10px;
+  background-color: #6dbfb8;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 200px;
+}
+
+@media (max-width: 480px) {
+  .button-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+select{
+  padding: 10px;
+  background-color: #6dbfb8;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+.heading{
+  margin-top: 1em; 
+}
+
+main{
+  margin-top:0%;
+}
+{% endblock %}
+
+{% block nav %}
+<header>
+    <nav>
+      <ul class="nav-links nav-links-left">
+        <li><a href="/home">Organizations</a></li>
+      </ul>
+      <ul class="nav-links">
+        <li><a href="/coordinator">Results Manager</li>
+      </ul>
+      <ul class="nav-links nav-links-right">
+        <li><a href="/account">Account</a></li>
+        <li><a href="/logout">Log Out</a></li>
+      </ul>
+    </nav>
+  </header>
+{% endblock %}
+
+{% block content %}
+<div>
+  <h1 class="heading">MANAGE COMPETITION</h1>
+  <select>
+    <option value="option1">Option 1</option>
+    <option value="option2">Option 2</option>
+    <option value="option3">Option 3</option>
+  </select>
+  
+  <div class="button-container">
+    <button class="button1">Delete</button>
+    <button class="button2">Edit Results</button>
+    <button class="button3">Cancel</button>
+    <button class="button4">Edit Information</button>
+  </div>
+</div>
+{% endblock %}

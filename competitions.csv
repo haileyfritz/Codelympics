@@ -1,0 +1,45 @@
+id,organization,competition_name,start_time,end_time
+1,Microsoft,CodeMaster Challenge,10:25,12:25
+2,Microsoft,Hackathon CodeWarriors,11:40,1:40
+3,Microsoft,ByteBrawl Coding Cup,2:10,4:10
+4,Microsoft,Algorithm Clash,12:55,2:55
+5,Microsoft,CodeSprint Royale,10:15,12:15
+6,Microsoft,Coder's Quest,3:30,5:30
+7,Google,DevBattle Royale,1:20,3:20
+8,Google,HackCodeMania,11:50,1:50
+9,Google,Algorithmic Rumble,4:45,6:45
+10,Google,CodeMaze Challenge,2:05,4:05
+11,Google,ByteBlitz Bonanza,10:30,12:30
+12,Google,CodeCrunch Challenge,1:40,3:40
+13,Meta,HackGenius Championship,12:20,2:20
+14,Meta,Algorithmic Showdown,11:15,1:15
+15,Meta,CodeWarrior's Clash,4:25,6:25
+16,Meta,Coder's Colosseum,10:05,12:05
+17,Meta,DevHacker's Showdown,2:30,4:30
+18,Meta,HackCode Frenzy,1:10,3:10
+19,Github,Algorithmic Thunderdome,3:50,5:50
+20,Github,CodeCombat Challenge,4:50,1:25
+21,Github,Imagine Cup,4:45,6:45
+22,Github,CyberYouth Championship,2:05,4:05
+23,Github,Code Olympiad,10:30,12:30
+24,Github,RoboRAVE,1:40,3:40
+25,Apple,Techno Schematics,12:20,2:20
+26,Apple,Java Cup,10:50,12:50
+27,Apple,Python Masters,11:50,1:50
+28,Apple,Hack Master,10:25,12:25
+29,Apple,Robotics Jam,11:40,1:40
+30,Apple,TechCrunch,2:10,4:10
+31,Amazon,Web Summit,12:55,2:55
+32,Amazon,TechRush ,10:15,12:15
+33,Amazon,Tech Youth Summit,3:30,5:30
+34,Amazon,Amazon Startup Competition,1:20,3:20
+35,Amazon,Next Founders,11:50,1:50
+36,Amazon,Youth Pitch Cycle,12:20,2:20
+37,Netflix,PythonBattle,11:15,1:15
+38,Netflix,Startup Summit,4:25,6:25
+39,Netflix,Cyberton,10:05,12:05
+40,Netflix,C Battle,2:30,4:30
+41,Netflix,NoveTECH,1:10,3:10
+42,Netflix,WebDev Cup,3:50,5:50
+
+

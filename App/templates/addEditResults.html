@@ -1,0 +1,271 @@
+{% extends "layout.html" %}
+{% block title %}Manage Results{% endblock %}
+
+{% block styles%}
+main{
+  padding-top: 0;
+  margin: 0px;
+}
+
+.main_content{
+  background:linear-gradient(rgba(201, 246, 230, 0.35),rgba(71, 134, 163, 0.65)), url('https://i.imgur.com/Ix2Q5ua.jpg');
+  overflow-x: scroll;
+}
+
+nav {
+  background-color: #333;
+  color: #fff;
+  padding: 3px;
+  text-align: center;
+  position: relative;
+  margin-top: 85px;
+  top: 100%;
+  height: 30px;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav ul {
+list-style-type: none;
+margin-top: 10px;
+padding: 0;
+display: flex;
+justify-content: space-between;
+}
+
+nav li {
+  margin: 0 10px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: medium;
+}
+
+.nav-links {
+  display: flex;
+  align-items:last baseline;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a:hover{
+  font-size: 18px;
+  transition: 0.5s;
+}
+
+.nav-links-left {
+  margin-right: auto;
+}
+
+.nav-links-right {
+  margin-left: auto;
+}
+
+.nav-links li {
+  margin: 0 10px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+.edit_box{
+  border: 2px solid #282828;
+  box-sizing: border-box;
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  display: flex;
+  width: fit-content;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: rgba(233, 255, 247, .65);
+}
+
+.heading{
+  text-align:center;
+}
+
+/* TRIAL 1*/
+#team-table{
+  border-collapse: separate;
+}
+
+#team-points{
+  width: 50px;
+}
+
+#team-time{
+  width: 70px;
+}
+
+#members-col{
+  width: 70px;
+}
+
+#team-table th, #team-table td {
+  padding: 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+#team-table th {
+  background-color: #84b7c5;
+}
+
+#team-table td{
+  background-color: rgba(110, 156, 198, 0.55);
+  font-size:12px;
+}
+
+.delete-btn, .add-team-btn, .cancel-btn {
+  padding: 6px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 3px;
+  margin-top:3px;
+  border: 2px solid #243246;
+  font-family: "Metamorphous", cursive;
+  font-size: smaller;
+}
+
+button:hover{
+  font-size:12px;
+  transition: 0.4s;
+}
+
+button:active{
+  opacity: 70%;
+  transition: 0.2s;
+}
+
+.cancel-btn{
+  background-color: #6dbfb8;
+  border: solid 2px #282828;
+  color: black;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  font-size: medium;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 20px;
+  margin-top: 10px;
+  font-family: "Metamorphous", cursive;
+  line-height: 1.5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cancel-btn:hover{
+  font-size:large;
+  background-color: #5eaaa4;
+  transition: 0.5s;
+}
+
+.delete-btn {
+  background-color: #f44336;
+  border-color: #811d16;
+}
+
+#add-team-form {
+  width: 70%;
+  max-width: 100%;
+  margin: 20px auto;
+  padding: 10px;
+}
+
+input {
+  width: 90px;
+  padding: 4px;
+  border: 2px solid #243246;
+  border-radius: 10px;
+  font-family: 'Metamorphous', cursive;
+  font-size: smaller;
+  text-align: center;
+}
+
+#add-team-form button {
+  padding: 6px;
+  border: none;
+  border-radius: 4px;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  margin-top: 10px;
+}
+{% endblock %}
+
+{% block nav %}
+<header>
+    <nav>
+      <ul class="nav-links nav-links-left">
+        <li><a href="/home">Organizations</a></li>
+      </ul>
+      <ul class="nav-links">
+        <li><a href="/coordinator">Dashboard</li>
+      </ul>
+      <ul class="nav-links nav-links-right">
+        <li><a href="/account">Account</a></li>
+        <li><a href="/logout">Log Out</a></li>
+      </ul>
+    </nav>
+  </header>
+{% endblock %}
+
+{% block content %}
+<div>
+  <h1 class="heading">Manage Results</h1>
+  <div class="edit_box">
+    <!-- Table with teams -->
+    <table id="team-table">
+      <thead>
+        <tr>
+          <th>Team Name</th>
+          <th>Points</th>
+          <th>Time Taken</th>
+          <th>Options</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <form id="add-team-form" method = 'POST' action = '/coordinator/edit-results/{{competition}}'>
+            <td><input type="text" id="team-name" name="team-name"  required></td>
+            <td><input type="number" id="team-points" name="team-points" required></td>
+            <td><input type="text" id="team-time" name="team-time" placeholder = 'Hours: Minutes' required></td>
+            <td><button type="submit" class= "add-team-btn" id="add-team-btn">Add Team</button></td>
+          </form>
+        </tr>
+        {% for team in teams %}
+        <tr>
+          <td>{{team.team_name}}</td>
+          <td>{{team.points}}</td>
+          <td>{{team.time_taken}}</td>
+          <td><a href="/{{competition}}/remove-team/{{team.id}}" id="delete-{{team.name}}" class="delete-btn">Delete</a></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <a href="/coordinator/add-competition" class="cancel-btn">Cancel</a>
+    
+  </div>
+</div>
+{% endblock %}

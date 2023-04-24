@@ -1,0 +1,253 @@
+﻿id,competition_name,team_name,points,time_taken
+1,CodeMaster Challenge,Binary Brigade,11,0:35
+2,CodeMaster Challenge,Code Commandos,3,1:25
+3,CodeMaster Challenge,Data Dazzlers,24,1:52
+4,CodeMaster Challenge,Tech Titans,55,1:34
+5,CodeMaster Challenge,Cyber Crusaders,4,1:25
+6,CodeMaster Challenge,Innovation Instigators,51,0:32
+7,ByteBrawl Coding Cup,Hack Hounds,39,0:51
+8,ByteBrawl Coding Cup,Pixel Pioneers,21,0:57
+9,ByteBrawl Coding Cup,Algorithm Avengers,100,0:43
+10,ByteBrawl Coding Cup,Byte Brawlers,76,1:12
+11,ByteBrawl Coding Cup,Code Captains,62,0:44
+12,ByteBrawl Coding Cup,Data Daredevils,12,0:40
+13,Algorithm Clash,Tech Trojans,61,0:48
+14,Algorithm Clash,Cyber Savvy,91,1:11
+15,Algorithm Clash,Innovation Illuminati,28,1:28
+16,Algorithm Clash,Hack Heroes,98,0:40
+17,Algorithm Clash,Digital Dons,41,1:18
+18,Algorithm Clash,Code Connoisseurs,51,1:18
+19,Hackathon CodeWarriors,Data Dominators,57,0:39
+20,Hackathon CodeWarriors,Tech Trailblazers,31,1:51
+21,Hackathon CodeWarriors,Pixel Professionals,79,0:39
+22,Hackathon CodeWarriors,Byte Bandits,76,0:43
+23,Hackathon CodeWarriors,Innovation Innovators,77,0:47
+24,Hackathon CodeWarriors,Hack Hammers,97,0:54
+25,CodeSprint Royale,Data Defenders,43,1:56
+26,CodeSprint Royale,Code Crusaders,84,1:09
+27,CodeSprint Royale,Tech Tornadoes,16,0:37
+28,CodeSprint Royale,Cyber Commandos,32,1:48
+29,CodeSprint Royale,Algorithm Architects,86,1:37
+30,CodeSprint Royale,Pixel Pundits,80,0:47
+31,Coder's Quest,Code Cognoscenti,69,0:36
+32,Coder's Quest,Data Dynamos,60,1:26
+33,Coder's Quest,Innovation Invincibles,97,0:58
+34,Coder's Quest,Tech Streets,51,1:38
+35,Coder's Quest,Diamond Hackers,30,1:09
+36,Coder's Quest,Code Commanders,1,1:54
+37,DevBattle Royale,Data Divas,4,0:33
+38,DevBattle Royale,Tech Troopers,74,0:44
+39,DevBattle Royale,Byte Brigade,64,0:36
+40,DevBattle Royale,Code Conquerors,37,0:54
+41,DevBattle Royale,Competition Coders,68,1:00
+42,DevBattle Royale,Byte Band,90,1:45
+43,HackCodeMania,Pixel Prodigies,92,1:28
+44,HackCodeMania,Cyber Defenders,93,1:14
+45,HackCodeMania,Byte Benders,97,1:12
+46,HackCodeMania,Tech Tacticians,94,1:01
+47,HackCodeMania,Hack Hustlers,46,1:04
+48,HackCodeMania,Innovate Innovators,51,1:15
+49,Algorithmic Rumble,Data Delighters,16,0:49
+50,Algorithmic Rumble,Code Climbers,19,1:07
+51,Algorithmic Rumble,Cyber Champions,6,1:23
+52,Algorithmic Rumble,Tech Terminators,8,1:32
+53,Algorithmic Rumble,Hack Hive,42,1:33
+54,Algorithmic Rumble,Innovate Insiders,11,0:47
+55,CodeMaze Challenge,Data Dashers,27,1:39
+56,CodeMaze Challenge,Pixel Paladins,45,1:16
+57,CodeMaze Challenge,Code Catalysts,86,1:38
+58,CodeMaze Challenge,Cyber Enforcers,34,1:50
+59,CodeMaze Challenge,Byte Blasters,41,1:56
+60,CodeMaze Challenge,Millennium FalconForce,33,1:57
+61,ByteBlitz Bonanza,Hack Heads,8,0:55
+62,ByteBlitz Bonanza,Innovate Illuminators,74,1:27
+63,ByteBlitz Bonanza,Data Deities,68,0:47
+64,ByteBlitz Bonanza,Pixel Pirates,87,1:28
+65,ByteBlitz Bonanza,Cyber Fusion,3,1:55
+66,ByteBlitz Bonanza,Code Creators,24,1:27
+67,CodeCrunch Challenge,Cyber Knights,24,0:50
+68,CodeCrunch Challenge,Byte Busters,53,1:03
+69,CodeCrunch Challenge,Hack Hunters,53,1:45
+70,CodeCrunch Challenge,Innovate Geniuses,54,1:21
+71,CodeCrunch Challenge,Data Driven Dreamers,67,1:23
+72,CodeCrunch Challenge,Tech Transformers,59,1:41
+73,HackGenius Championship,Quantum Techs,72,1:03
+74,HackGenius Championship,Nexus Innovators,18,0:32
+75,HackGenius Championship,Vortex Vanguards,52,0:35
+76,HackGenius Championship,Stellar Sprinters,19,0:34
+77,HackGenius Championship,Hyperion Hackers,19,1:58
+78,HackGenius Championship,Nebula Navigators,12,1:11
+79,Algorithmic Showdown,Supernova Squad,98,1:41
+80,Algorithmic Showdown,Fusion Frenzy,35,1:54
+81,Algorithmic Showdown,Solaris Synergists,32,0:39
+82,Algorithmic Showdown,WarpWave Riders,22,0:56
+83,Algorithmic Showdown,Electra Elite,38,1:54
+84,Algorithmic Showdown,Nova Nomads,42,1:30
+85,CodeWarrior's Clash,Gravity Gurus,32,1:42
+86,CodeWarrior's Clash,Cosmos Crew,67,1:15
+87,CodeWarrior's Clash,Aurora Avengers,1,0:40
+88,CodeWarrior's Clash,Plasma Pioneers,39,1:12
+89,CodeWarrior's Clash,Orion Outlaws,69,1:42
+90,CodeWarrior's Clash,Spectra Sprint,72,1:09
+91,Coder's Colosseum,Meteor Marauders,69,1:48
+92,Coder's Colosseum,Alpha Architects,60,0:36
+93,Coder's Colosseum,TerraTech Titans,88,1:39
+94,Coder's Colosseum,Quasar Questers,77,1:22
+95,Coder's Colosseum,Celestial Champions,13,1:51
+96,Coder's Colosseum,Comet Crusaders,58,0:41
+97,DevHacker's Showdown,Infinity Innovators,63,1:30
+98,DevHacker's Showdown,Satellite Sprinters,59,1:04
+99,DevHacker's Showdown,Gamma Galaxy Gang,83,1:13
+100,DevHacker's Showdown,Cosmic Crew,59,1:12
+101,DevHacker's Showdown,Star Stormers,32,1:49
+102,DevHacker's Showdown,Solar Flare Squad,68,0:38
+103,HackCode Frenzy,Uranus Ultrons,10,0:50
+104,HackCode Frenzy,Velocity Voyagers,14,0:51
+105,HackCode Frenzy,Eclipse Enforcers,26,0:46
+106,HackCode Frenzy,Lightning Legion,36,1:54
+107,HackCode Frenzy,Astro Assassins,28,1:07
+108,HackCode Frenzy,Nebula Ninjas,14,1:43
+109,HackCodeMania,Plasma Patrol,60,0:54
+110,Algorithmic Thunderdome,Hyper DriveHeroes,9,1:31
+111,Algorithmic Thunderdome,Quark Quantum,40,1:07
+112,Algorithmic Thunderdome,Spectrum Saviors,30,1:09
+113,Algorithmic Thunderdome,Xeno Xperts,9,1:00
+114,Algorithmic Thunderdome,Stellar Strikers,100,0:36
+115,Algorithmic Thunderdome,Omega Opportunists,22,1:38
+116,WebDev Cup,WarpWave Warriors,20,1:19
+117,WebDev Cup,Moonshot Mavericks,32,1:43
+118,WebDev Cup,Orion Overlords,84,0:35
+119,WebDev Cup,Aurora Adventurers,81,0:53
+120,WebDev Cup,Celestial Challengers,66,0:33
+121,WebDev Cup,AlphaAstro Artists,32,0:53
+122,NoveTECH,TerraTech Troopers,56,1:34
+123,NoveTECH,Jedi Juggernauts,80,1:51
+124,NoveTECH,Sith Slayers,1,1:03
+125,NoveTECH,DeathStar Destroyers,7,0:35
+126,NoveTECH,Rebel Renegades,87,0:31
+127,NoveTECH,Force Fury,32,1:44
+128,C Battle,Galactic Guardians,3,1:52
+129,C Battle,DarkSide Demolishers,59,1:26
+130,C Battle,LightSide Legends,83,1:59
+131,C Battle,Starfighter Squadron,71,0:48
+132,C Battle,Sith Lord Slayers,22,1:23
+133,C Battle,Wookiee Warriors,80,0:48
+134,Cyberton,Imperial Inquisitors,31,1:31
+135,Cyberton,Rebel Alliance Rangers,17,1:00
+136,Cyberton,Droid Defenders,82,1:33
+137,Cyberton,Force Awakened Heroes,60,1:31
+138,Cyberton,Lightsaber Legion,78,0:46
+139,Cyberton,Clone Trooper Commandos,95,1:42
+140,CodeCombat Challenge,Resistance Rising,32,0:33
+141,CodeCombat Challenge,Mandalorian Mercenaries,32,0:36
+142,CodeCombat Challenge,Ewok Eradicators,45,0:36
+143,CodeCombat Challenge,Sith Sorcerers,61,1:33
+144,CodeCombat Challenge,Jedi Masters,6,1:32
+145,CodeCombat Challenge,Imperial Stormtroopers,95,1:47
+146,CodeMaster Challenge,Rebel Revolutionaries,30,1:17
+147,Imagine Cup,Galactic Bounty Hunters,92,1:18
+148,Imagine Cup,DarkSide Destroyers,85,1:42
+149,Imagine Cup,LightSide Liberators,43,1:07
+150,Imagine Cup,StarWars Strikers,69,1:02
+151,Imagine Cup,Millennium FalconFury,67,1:01
+152,Imagine Cup,Sith Assassins,98,1:12
+153,CyberYouth Championship,Wookiee Warlords,55,1:16
+154,CyberYouth Championship,Imperial Infiltrators,48,1:38
+155,CyberYouth Championship,Rebel Alliance Assault,7,0:37
+156,CyberYouth Championship,Droid Destruction Squad,52,1:52
+157,CyberYouth Championship,Force Awakened Defenders,60,1:14
+158,CyberYouth Championship,Lightsaber Wielders,96,1:44
+159,Code Olympiad,Clone Trooper Corps,5,1:33
+160,Code Olympiad,Resistance Rangers,4,1:15
+161,Code Olympiad,Mandalorian Marauders,62,1:54
+162,Code Olympiad,Ewok Eliminators,92,1:53
+163,Code Olympiad,Sith ShadowLords,24,1:08
+164,Code Olympiad,Jedi Protectors,21,1:04
+165,Startup Summit,Imperial Elite Force,99,1:03
+166,Startup Summit,Rebel Resistance Raiders,19,0:57
+167,Startup Summit,Galactic Guard Force,19,1:41
+168,Startup Summit,DarkSide Dominators,50,1:19
+169,Startup Summit,LightSide Liberation Army,75,0:53
+170,Startup Summit,StarWars Sentinels,51,0:47
+171,PythonBattle,Lightning Boltz,79,0:47
+172,PythonBattle,Raging Racketeers,45,1:53
+173,PythonBattle,Blaze Blasters,29,1:53
+174,PythonBattle,Titans Tornadoes,21,0:54
+175,PythonBattle,Viper Victors,50,0:54
+176,PythonBattle,Avalanche Avengers,55,1:58
+177,Youth Pitch Cycle,Storming Striders,99,0:50
+178,Youth Pitch Cycle,Blitzkrieg Blitzers,15,1:24
+179,Youth Pitch Cycle,Rampage Racers,74,1:07
+180,Youth Pitch Cycle,Cyclone Crushers,20,0:50
+181,Youth Pitch Cycle,Thundering Tigers,54,1:45
+182,Youth Pitch Cycle,RedDevils Raiders,33,1:45
+183,RoboRAVE,Swift Strikers,24,0:50
+184,RoboRAVE,Razorbacks United,30,1:00
+185,RoboRAVE,Avalanche Achievers,50,1:30
+186,RoboRAVE,Storming Stars,97,0:35
+187,RoboRAVE,Blitzkrieg Bombers,96,1:16
+188,RoboRAVE,Rampage Runners,52,1:14
+189,Techno Schematics,Cyclone Cyclones,86,0:42
+190,Techno Schematics,Program Panthers,95,0:32
+191,Techno Schematics,Bigtax,100,0:49
+192,Techno Schematics,Wrapsafe,3,0:32
+193,Techno Schematics,Andalax,4,0:56
+194,Techno Schematics,Zoolab,64,1:34
+195,Java Cup,Mat Lam Tam,24,0:56
+196,Java Cup,Zathin,13,0:53
+197,Java Cup,Ventosanzap,34,1:23
+198,Java Cup,Voltsillam,34,1:28
+199,Java Cup,Greenlam,37,1:11
+200,Java Cup,Asoka,15,0:39
+201,Next Founders,Duobam,8,1:06
+202,Next Founders,Kanlam,40,0:41
+203,Next Founders,Alphazap,5,1:39
+204,Next Founders,Solarbreeze,45,1:04
+205,Next Founders,Konklux,57,1:59
+206,Next Founders,Y-Solowarm,54,1:11
+207,Amazon Startup Competition,Aerified,82,1:54
+208,Amazon Startup Competition,Stronghold,90,0:46
+209,Amazon Startup Competition,Domainer,20,1:55
+210,Amazon Startup Competition,Tinpan Team,74,0:44
+211,Amazon Startup Competition,Matsoft,53,0:41
+212,Amazon Startup Competition,Ronstring,57,0:32
+213,Tech Youth Summit,Bytecard,32,1:48
+214,Tech Youth Summit,Stimulators,30,1:46
+215,Tech Youth Summit,Transcof,34,0:56
+216,Tech Youth Summit,Home Stretch,90,1:00
+217,Tech Youth Summit,Prodder,53,1:55
+218,Tech Youth Summit,Sub-Extreme,44,1:34
+219,TechRush ,Sonsingers,60,0:31
+220,TechRush ,Otcom,11,1:50
+221,TechRush ,Gembuckets,10,1:28
+222,TechRush ,Petal Pioneers,23,0:56
+223,TechRush ,Blooming Beauties,37,1:45
+224,TechRush ,Floral Force,21,1:06
+225,Web Summit,Blossom Brigade,44,2:00
+226,Web Summit,Lily League,87,1:33
+227,Web Summit,Rose Rangers,90,1:19
+228,Web Summit,Daisy Dazzlers,82,1:15
+229,Web Summit,Orchid Octane,91,1:11
+230,Web Summit,Sunflower Squad,33,1:49
+231,Python Masters,Tulip Titans,96,0:41
+232,Python Masters,Violet Victory,53,1:31
+233,Python Masters,Marigold Mavericks,83,1:43
+234,Python Masters,Camellia Crushers,26,1:38
+235,Python Masters,Azalea Avengers,25,1:04
+236,Python Masters,Iris Impact,33,1:30
+237,Hack Master,Daffodil Dynamos,29,0:57
+238,Hack Master,Peony Powerhouse,95,1:28
+239,Hack Master,Hyacinth Hurricanes,92,1:07
+240,Hack Master,Zinnia Zenith,87,0:56
+241,Robotics Jam,Poppy Punchers,42,1:13
+242,Robotics Jam,Blue Stompers,64,0:37
+243,Robotics Jam,Dynamic Duos,55,1:21
+244,Robotics Jam,Brilliant Stars,73,1:09
+245,Robotics Jam,Geniuses,84,1:02
+246,Robotics Jam,LawnMopers,6,1:05
+247,TechCrunch,Ape Handlers,43,0:43
+248,TechCrunch,Space Monkeys,51,1:38
+249,TechCrunch,Dynamites,12,1:56
+250,TechCrunch,Buzzers,25,0:31
+251,TechCrunch,People Pleasers,70,1:10
+252,TechCrunch,Rookies,26,0:49

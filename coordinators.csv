@@ -1,0 +1,8 @@
+id,organization,first_name,last_name,email,username,password,large_picture,med_picture,thumbnail
+1,Apple,Michael,Johnson,michaeljohnson@example.com,michaelj789,M!chaelJ0hnson,https://randomuser.me/api/portraits/men/70.jpg,https://randomuser.me/api/portraits/med/men/70.jpg,https://randomuser.me/api/portraits/thumb/men/70.jpg
+2,Google,Emily,Brown,emilybrown@example.com,emilyb678,EmilyBr0wn#678,https://randomuser.me/api/portraits/women/48.jpg,https://randomuser.me/api/portraits/med/women/48.jpg,https://randomuser.me/api/portraits/thumb/women/48.jpg
+3,Microsoft,William,Anderson,williamanderson@example.com,william_a,Anderson@2023,https://randomuser.me/api/portraits/men/5.jpg,https://randomuser.me/api/portraits/med/men/5.jpg,https://randomuser.me/api/portraits/thumb/men/5.jpg
+4,Github,Sophia,Lee,sophiale@example.com,sophial123,S0phiaL#123,https://randomuser.me/api/portraits/women/9.jpg,https://randomuser.me/api/portraits/med/women/9.jpg,https://randomuser.me/api/portraits/thumb/women/9.jpg
+5,Amazon,Alexander,Chen,alexanderchen@example.com,alex_c456,AChen@789,https://randomuser.me/api/portraits/men/40.jpg,https://randomuser.me/api/portraits/med/men/40.jpg,https://randomuser.me/api/portraits/thumb/men/40.jpg
+6,Meta,Olivia,Taylor,oliviataylor@example.com,oliviataylor89,OliviaTaylor$89,https://randomuser.me/api/portraits/women/5.jpg,https://randomuser.me/api/portraits/med/women/5.jpg,https://randomuser.me/api/portraits/thumb/women/5.jpg
+7,Netflix,Ava,Walker,avawalker@example.com,avawalker22,AvaW@lk3r,https://randomuser.me/api/portraits/women/48.jpg,https://randomuser.me/api/portraits/med/women/48.jpg,https://randomuser.me/api/portraits/thumb/women/48.jpg

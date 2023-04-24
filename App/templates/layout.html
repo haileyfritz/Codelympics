@@ -1,0 +1,220 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="fonts.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Metamorphous&display=swap" rel="stylesheet">
+  
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+     <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>{% block title %}Layout{% endblock %}</title>
+
+    <style>
+
+      body, main, header, footer{
+        font-family: 'Metamorphous', cursive;
+        font-size: small;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        margin: 0;
+      }
+      
+      #banner {
+        background-color: #e9fff7;
+        border: 2px dotted black;
+        width: 100%;
+        position: fixed;
+        z-index: 5;
+        padding: 1%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        }
+      
+      #banner img {
+        display: block;
+        margin: 0 auto;
+        max-height: 60px;
+        max-width: 100%;
+        height: auto;
+        position: center;
+        top: 1px;
+      }
+
+      #left-column, #right-column {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        background-image: url('https://imgur.com/sFOwRQ8.jpg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        z-index: -1;
+        flex: 1;
+      }
+      
+      #left-column {
+        position: absolute;
+        left: 0;
+        margin-right: 10px;
+        transform: translateX(22.5%);
+      }
+      
+      #right-column {
+        position: absolute;
+        left: 0;
+        margin-left: 10px;
+        transform: translateX(70%);
+      }
+      
+      main {
+        flex-grow: 1;
+        margin-top: 4.5%;
+        margin-bottom: 5px;
+        position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding-bottom: 70px;
+        background-color: #243246;
+      }
+      
+      footer {
+        background-color: #e9fff7;
+        color: #333;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        z-index: 2;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+      }
+      
+      .footer-section {
+        text-align: center;
+        margin-right: 20px;
+      }
+      
+      .main_content {
+        margin: 0 10px;
+        margin-top: 3.5%;
+        width: 100%;
+        height:min-content;
+        background: linear-gradient(rgba(201, 246, 230, 0.35),rgba(71, 134, 163, 0.65)), url('https://i.imgur.com/Ix2Q5ua.jpg');
+        z-index: 1;
+        border: 2px solid #282828;
+        box-sizing: border-box;
+        border-radius: 20px;
+        flex-basis: 95%;
+        display: flex;
+        justify-content:center;
+      }
+
+      html {
+        overflow: scroll;
+      }
+
+      .flash-message {
+        position: fixed;
+        top: 0px;
+        width: 100%;
+        z-index: 100;
+      }
+      
+      .alert {
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+        align-items: center;
+        font-size: medium;
+        font-weight: bold;
+        padding: 12px;
+        max-width: auto;
+        background-color: #92c3c0;
+        border: 2px solid #243246;
+        color: black;
+        height: 5px;
+      }
+      
+      .alert .close {
+        background: transparent;
+        border: none;
+        outline: none;
+        padding: 0;
+        margin-left: 12px;
+        font-size: 24px;
+        font-weight: bold;
+        cursor: pointer;
+        color: black;
+      }
+      
+      {% block styles %}
+      {% endblock %}
+      
+    </style>
+
+  </head>
+  <body>
+    <div id="banner">
+      <div id="left-column"></div>
+      <img src="https://imgur.com/j9nS1Ug.png" alt="My Website Logo">
+      <div id="right-column"></div>
+    </div>
+      {% block nav %}{% endblock %}
+
+      {% with messages = get_flashed_messages() %}
+        {% if messages %}
+          <div class="flash-message" id="flash-message">
+            <div class="alert">
+              {{ messages[0] }}
+              <button class="close" data-dismiss="alert" onclick="closeFlashMessage()">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+          </div>
+        {% endif %}
+      {% endwith %}
+
+    <main>
+      <div class="main_content">
+        {% block content %}
+        {% endblock %}
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-section">
+        INFO 2602 Project
+      </div>
+      <div class="footer-section">
+        Citius, Altius, Fortius
+      </div>
+      <div class="footer-section">
+        Program Panthers 2023
+      </div>
+    </footer>
+  </body>
+</html>
+
+<script>
+  function closeFlashMessage() {
+    var flashMessage = document.getElementById("flash-message");
+    flashMessage.parentNode.removeChild(flashMessage);
+  }
+  
+  {% block scripts %}
+  {% endblock %}
+  </script>  

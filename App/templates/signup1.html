@@ -1,0 +1,85 @@
+{% extends "layout.html" %}
+{% block title %}Sign Up{% endblock %}
+
+{% block styles %}
+    .btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    flex-direction: column;
+}
+
+.btn {
+    background-color: #6dbfb8;
+    border: solid 2px #282828;
+    height:150px;
+    width:250px;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 28px;
+    margin: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Metamorphous', cursive;
+}
+
+.btn:hover{
+    font-size: 30px;
+    width: 270px;
+    background-color: #5eaaa4;
+    transition: 0.5s;
+}
+
+.btn:active{
+    background-color: #92c3c0;
+    transition:0.2s;
+}
+
+#back-btn{
+    background-color: lightgray;
+}
+
+h1{
+    margin-bottom: 20px;
+}
+
+p, span, a{
+    font-family: 'Metamorphous', cursive;
+    font-size:small;
+    display: contents;
+}
+
+a{
+    font-size: small;
+    color: #red;
+}
+
+a:hover{
+    color: blue;
+    font-size: medium;
+    transition: 0.5s;
+}
+{% endblock %}
+
+{% block content %}
+<form class="signupForm">
+  <div class="btn-container">
+      <h1>Who are you?</h1>
+      
+    
+        <a href="/signup/competitor" class="btn">Competitor</a>    
+        <a href="/signup/coordinator" class="btn">Coordinator</a>
+      
+      <span>Have an account? Go</span>
+      <a href="/">back to Login!</a>
+  </div>
+</form>
+{% endblock %}

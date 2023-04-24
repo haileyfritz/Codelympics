@@ -1,0 +1,252 @@
+{% extends "layout.html" %}
+{% block title %}Add Results{% endblock %}
+
+{% block styles %}
+.main_content{
+  position: relative;
+  height: fit-content;
+  flex-direction:column;
+  padding: 20px;
+}
+
+main{
+  margin-top: 0px;
+}
+
+nav {
+    background-color: #333;
+    color: #fff;
+    padding: 3px;
+    text-align: center;
+    position: relative;
+    margin-top: 85px;
+    top: 100%;
+    height: 30px;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+  }
+
+nav ul {
+  list-style-type: none;
+  margin-top: 10px;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav li {
+  margin: 0 10px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: medium;
+}
+
+.nav-links {
+  display: flex;
+  align-items:last baseline;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a:hover{
+  font-size: 18px;
+  transition: 0.5s;
+}
+
+.nav-links-left {
+  margin-right: auto;
+}
+
+.nav-links-right {
+  margin-left: auto;
+}
+
+.nav-links li {
+  margin: 0 10px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+}
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  #header {
+    text-align: center;
+    margin-top:30px;
+    padding: 20px;
+  }
+  
+  #header h1 {
+    margin: 0;
+  }
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  margin-top:1em;
+  padding: 20px;
+  width: 400px;
+}
+
+#search-input{
+  border-radius:20px;
+  border: 2px solid #282828;
+  padding: 10px;
+  width: 95%;
+  text-align: center;
+  font-family: "Metamorphous", cursive;
+  font-size: 13px;
+}
+
+#search-input:hover{
+  width: 100%;
+  transition:0.4s;
+}
+
+
+label, input {
+  margin-bottom: 10px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  }
+  
+  .input-left, .input-right {
+  flex-basis: 25%;
+  }
+  
+  .input-center {
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  }
+
+input[type="text"]{
+  width: 100%;
+  padding: 10px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  }
+
+
+.buttons{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; 
+  align-items: center;
+  margin-left:30em; 
+  }
+  
+  
+  .btn {
+    background-color: #6dbfb8;
+    border: solid 2px #282828;
+    color: black;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: medium;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-top: 10px;
+    font-family: "Metamorphous", cursive;
+    line-height: 1.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .btn:hover{
+    font-size:large;
+    background-color: #5eaaa4;
+    transition: 0.5s;
+  }
+  
+  .btn:active{
+      background-color: #92c3c0;
+      transition:0.2s;
+  }
+{% endblock %}
+
+{% block nav %}
+<header>
+    <nav>
+      <ul class="nav-links nav-links-left">
+        <li><a href="/home">Organizations</a></li>
+      </ul>
+      <ul class="nav-links">
+        <li><a href="/coordinator">Results Manager</li>
+      </ul>
+      <ul class="nav-links nav-links-right">
+        <li><a href="/account">Account</a></li>
+        <li><a href="/logout">Log Out</a></li>
+      </ul>
+    </nav>
+  </header>
+{% endblock %}
+
+{% block content %}
+<div>
+  <div id = 'header'>
+    <h1>Edit Information</h1>
+  </div>
+  <div class = 'grid-container'>
+      <div id="search-container">
+        <input type="text" id="search-input" placeholder="Search Competition">
+        
+      </div>
+      <div>
+        <form method = 'POST' action = '/coordinator/manage-competition'>
+          <div class="form">
+            <label for="input1">Competition Name</label>
+            <input type="text" id="input1" name="input1">
+            
+            <div class="input-group">
+              <div class="input-left">
+                <label for="input2">Start Time</label>
+                <input type="text" id="input2" name="input2">
+              </div>
+              
+              <div class="input-right"  style="margin-left: 20px;">
+                <label for="input4">End Time</label>
+                <input type="text" id="input4" name="input4">
+              </div>
+            </div>
+          </div>
+          <div class="buttons">
+            <button class="btn" type="submit">Submit</button>
+            <a href="/coordinator" class="btn">Cancel</a> 
+          </div>
+        </form>
+      </div>
+</div>
+</div>
+{% endblock %}

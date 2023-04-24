@@ -1,0 +1,234 @@
+{% extends "layout.html" %}
+{% block title %}Home{% endblock %}
+
+{% block styles %}
+.main_content{
+  position: relative;
+  height: fit-content;
+  flex-direction:column;
+  padding: 20px;
+}
+
+main{
+  margin-top: 0px;
+}
+
+nav {
+    background-color: #333;
+    color: #fff;
+    padding: 3px;
+    text-align: center;
+    position: relative;
+    margin-top: 85px;
+    top: 100%;
+    height: 30px;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  nav ul {
+    list-style-type: none;
+    margin-top: 10px;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  nav li {
+    margin: 0 10px;
+  }
+
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: medium;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items:last baseline;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-links a:hover{
+    font-size: 18px;
+    transition: 0.5s;
+  }
+
+  .nav-links-left {
+    margin-right: auto;
+  }
+
+  .nav-links-right {
+    margin-left: auto;
+  }
+
+  .nav-links li {
+    margin: 0 10px;
+  }
+
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+
+  #header {
+    text-align: center;
+    margin-top:30px;
+    padding: 20px;
+  }
+
+  #header h1 {
+    margin: 0;
+  }
+
+  #message {
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px;
+    font-size: small;
+  }
+
+  #message h1 {
+    margin: 0;
+  }
+
+  #choose-menu{
+    flex-direction:column;
+  }
+
+  #search-container {
+    padding: 20px;
+    text-align: center;
+  }
+
+  #search-input {
+    width: 85%;
+    max-width: 600px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    outline: none;
+    text-align: center;
+    font-family: "Metamorphous", cursive;
+    font-size: medium;
+  }
+  #search-input:hover{
+    font-size: 18px;
+    transition: 0.5s;
+  }
+
+  #button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .button {
+    background-color: #6dbfb8;
+    border: solid 2px #282828;
+    color: black;
+    padding: 10px 20px;
+    height:95px;
+    width:180px;
+    text-align: center;
+    text-decoration: none;
+    font-size: medium;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 15px;
+    margin-top: 5px;
+    font-family: "Metamorphous", cursive;
+    line-height: 1.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .button:hover{
+    font-size:large;
+    background-color: #5eaaa4;
+    transition: 0.5s;
+  }
+
+  .button:active{
+      background-color: #92c3c0;
+      transition:0.2s;
+  }
+{% endblock %}
+
+{% block nav %}
+<header>
+    <nav>
+      <ul class="nav-links nav-links-left">
+        <li><a href="/home">Organizations</a></li>
+      </ul>
+      {% if user_type == 'Coordinator' %}
+      <ul class="nav-links">
+        <li><a href="/coordinator">Dashboard</li>
+      </ul>
+      {%endif%}
+      <ul class="nav-links nav-links-right">
+        <li><a href="/account">Account</a></li>
+        <li><a href="/logout">Log Out</a></li>
+      </ul>
+    </nav>
+</header>
+{% endblock %}
+
+{% block content %}
+<div id="choose-menu">
+  <div id="header">
+    <h1>{{organization.name}} Competitions!</h1>
+  </div>
+  <div id="search-container">
+    <input type="text" id="search-input" placeholder="Search Competitions">
+  </div>
+  <div id="button-container">
+    {% if competitions%}
+      {% for c in competitions%}
+        {% if user_type == 'Coordinator' and organization.id == user.organization_id  %}
+          <a href="/{{c.name}}/dashboard" class="button" id="{{c.name}}">{{ c.name }}</a>
+        {%else%}
+          <a href="/{{c.name}}/results" class="button" id="{{c.name}}">{{ c.name }}</a>
+        {%endif%}
+      {% endfor %}
+    {% else %}
+      <div id="message">
+        <h1>No competitions added yet!</h1>
+      </div>
+    {%endif%}
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+  const searchBar = document.querySelector("#search-input");
+  const buttonContainer = document.querySelector("#button-container");
+
+  searchBar.addEventListener("input", () => {
+    const searchText = searchBar.value.toLowerCase();
+    const buttons = buttonContainer.querySelectorAll("button");
+
+    buttons.forEach((button) => {
+      const buttonText = button.textContent.toLowerCase();
+
+      if (buttonText.includes(searchText)) {
+        buttonContainer.insertBefore(button, buttonContainer.firstChild);
+      }
+    });
+  });
+{% endblock %}
